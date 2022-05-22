@@ -40,7 +40,7 @@ grains:
         path: rds
       host:
         cloud-account: aws
-        compute-service: qualidev2-eks
+        compute-service: review4-eks
       inputs:
         - sandbox_id: '{{ sandboxid | downcase }}'
         - size: '{{ .inputs.db_size }}' 
@@ -63,7 +63,7 @@ grains:
         path: s3
       host:
         cloud-account: aws
-        compute-service: qualidev2-eks
+        compute-service: review4-eks
       inputs:
         - region: us-east-1
         - acl: private
@@ -80,7 +80,7 @@ grains:
         path: robotShop
       host:
         cloud-account: aws
-        compute-service: qualidev2-eks
+        compute-service: review4-eks
       # commands:
       #   - "dep up xxx"
 
