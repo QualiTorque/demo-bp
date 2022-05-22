@@ -36,7 +36,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: Torque-Spec2-Demos
+        store: autogen_repo_sandbox_3aba56fa
         path: rds
       host:
         cloud-account: aws
@@ -59,7 +59,7 @@ grains:
     kind: terraform
     spec: 
       source:
-        store: Torque-Spec2-Demos
+        store: autogen_repo_sandbox_3aba56fa
         path: s3
       host:
         cloud-account: aws
@@ -76,7 +76,7 @@ grains:
     depends-on: mySqlDB, s3Bucket
     spec:
       source:
-        store: Torque-Spec2-Demos
+        store: autogen_repo_sandbox_3aba56fa
         path: robotShop
       host:
         cloud-account: aws

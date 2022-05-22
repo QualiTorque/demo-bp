@@ -33,7 +33,7 @@ grains:
     kind: blueprint
     spec:
       source: 
-        store: Torque-Spec2-Demos
+        store: autogen_repo_sandbox_3aba56fa
         path: blueprints
       host:
         cloud-account: aws
@@ -51,7 +51,7 @@ grains:
     depends-on: infra
     spec:
       source:
-        store: Torque-Spec2-Demos
+        store: autogen_repo_sandbox_3aba56fa
         path: robotShop
       host:
         cloud-account: aws
