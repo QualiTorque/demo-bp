@@ -38,7 +38,7 @@ grains:
         path: robotShop
       host:
         cloud-account: aws
-        compute-service: review4-eks
+        compute-service: review4-eks-service
       inputs:
         - hostname: 'robotshop-{{ sandboxid | downcase }}'
         - version: '{{ .inputs.version }}'
@@ -54,7 +54,7 @@ grains:
         path: blueprints
       host:
         cloud-account: aws
-        compute-service: review4-eks
+        compute-service: review4-eks-service
       inputs:
         - size: '{{ .inputs.db_size }}'
         - engine_version: '{{ .inputs.db_engine_version }}'
