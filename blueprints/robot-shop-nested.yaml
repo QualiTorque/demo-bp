@@ -36,8 +36,8 @@ grains:
         store: autogen_repo_sandbox_3aba56fa
         path: blueprints
       host:
-        cloud-account: aws
-        compute-service: review4-eks-service
+        cloud-account: AWS-DEV2
+        compute-service: review4-dev2-eks
       inputs:
         - size: '{{ .inputs.db_size }}'
         - engine_version: '{{ .inputs.db_engine_version }}'
@@ -54,8 +54,8 @@ grains:
         store: autogen_repo_sandbox_3aba56fa
         path: robotShop
       host:
-        cloud-account: aws
-        compute-service: review4-eks-service
+        cloud-account: AWS-DEV2
+        compute-service: review4-dev2-eks
 
       inputs:
         - hostname: 'robotshop-{{ sandboxid | downcase }}'
