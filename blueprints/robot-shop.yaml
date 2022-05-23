@@ -50,7 +50,7 @@ grains:
         - engine: MySQL
         - username: adminuser
         - vpc_id: vpc-02e3bca90b081cd0f
-        - region: eu-west-1
+        - region: us-east-1
       outputs:
         - hostname
         - connection_string
@@ -65,7 +65,7 @@ grains:
         cloud-account: aws
         compute-service: review4-eks-service
       inputs:
-        - region: eu-west-1
+        - region: us-east-1
         - acl: private
         - name: 'robotshop-s3-{{ sandboxid | downcase }}'
       outputs:
