@@ -61,7 +61,7 @@ outputs:
   DB_hostname:
     value: '{{ .grains.mySqlDB.outputs.hostname }}'
   S3_bucket_arn:
-    value: '{{ .grains.s3Bucket.outputs.s3_bucket_arn }}'
+    value: '{{ .grains.s3bp.outputs.s3_bucket_arn }}'
   connection_string:
     value: '{{ .grains.mySqlDB.outputs.connection_string}}'
   
