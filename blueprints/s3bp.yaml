@@ -24,7 +24,7 @@ inputs:
     description: "Name of the bucket."
 
 grains:
-    s3Bucket:
+  s3Bucket:
     kind: terraform
     spec:
       source:
