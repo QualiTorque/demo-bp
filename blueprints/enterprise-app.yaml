@@ -29,7 +29,7 @@ outputs:
 
 
 grains:
-  infra:
+  tf-infra:
     kind: blueprint
     spec:
       source: 
