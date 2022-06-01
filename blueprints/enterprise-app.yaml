@@ -7,12 +7,6 @@ inputs:
     display-style: normal
     default: "0.4.3"
     description: "Version of the robotShop micorservices application"
- 
-  exec_host:
-    type: string
-    display-style: normal
-    default: "k8s-dbs"
-    description: "Execution host"
 
   db_size:
     type: string
@@ -35,14 +29,15 @@ outputs:
 
 
 grains:
-  tf-infra:
+  infra:
     kind: blueprint
     spec:
       source: 
         store: my-bp-repo
         path: blueprints
       host:
-        name: '{{ .inputs.exec_host }}'
+        cloud-account: AWS-DEV2
+        compute-service: k8s-dbs
       inputs:
         - size: '{{ .inputs.db_size }}'
         - engine_version: '{{ .inputs.db_engine_version }}'
@@ -59,7 +54,8 @@ grains:
         store: my-bp-repo
         path: robotShop
       host:
-        name: '{{ .inputs.exec_host }}'
+        cloud-account: AWS-DEV2
+        compute-service: k8s-dbs
 
       inputs:
         - hostname: 'robotshop-{{ sandboxid | downcase }}'
