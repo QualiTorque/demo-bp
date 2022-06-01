@@ -1,3 +1,5 @@
+kind: bluperint
+spec: 2
 spec_version: 2-preview
 description: Infra microservices application deployed on K8S with TF and RDS deployed with TF
 
