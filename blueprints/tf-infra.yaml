@@ -4,6 +4,7 @@ spec_version: 2-preview
 description: Infra microservices application deployed on K8S with TF and RDS deployed with TF
 
 inputs:
+
   db_size:
     type: string
     display-style: normal
@@ -24,7 +25,8 @@ grains:
         store: my-bp-repo
         path: rds
       host:
-        name: k8s-dbs
+        cloud-account: AWS-DEV2
+        compute-service: k8s-dbs
       inputs:
         - sandbox_id: '{{ sandboxid | downcase }}'
         - size: '{{ .inputs.db_size }}'
@@ -46,7 +48,8 @@ grains:
         store: my-bp-repo
         path: s3
       host:
-        name: k8s-dbs
+        cloud-account: AWS-DEV2
+        compute-service: k8s-dbs
       inputs:
         - region: us-east-1
         - acl: private
@@ -61,4 +64,3 @@ outputs:
     value: '{{ .grains.s3Bucket.outputs.s3_bucket_arn }}'
   connection_string:
     value: '{{ .grains.mySqlDB.outputs.connection_string}}'
-  
