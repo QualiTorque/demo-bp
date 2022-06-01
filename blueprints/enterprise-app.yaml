@@ -8,7 +8,7 @@ inputs:
     default: "0.4.3"
     description: "Version of the robotShop micorservices application"
  
-  host:
+  exec_host:
     type: string
     display-style: normal
     default: "k8s-dbs"
@@ -42,7 +42,7 @@ grains:
         store: my-bp-repo
         path: blueprints
       host:
-        name: '{{ .inputs.host }}'
+        name: '{{ .inputs.exec_host }}'
       inputs:
         - size: '{{ .inputs.db_size }}'
         - engine_version: '{{ .inputs.db_engine_version }}'
@@ -59,7 +59,7 @@ grains:
         store: my-bp-repo
         path: robotShop
       host:
-        name: '{{ .inputs.host }}'
+        name: '{{ .inputs.exec_host }}'
 
       inputs:
         - hostname: 'robotshop-{{ sandboxid | downcase }}'
