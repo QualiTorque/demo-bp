@@ -25,7 +25,6 @@ grains:
         store: my-bp-repo
         path: rds
       host:
-        cloud-account: AWS-DEV2
         compute-service: k8s-dbs
       inputs:
         - sandbox_id: '{{ sandboxid | downcase }}'
@@ -48,7 +47,6 @@ grains:
         store: my-bp-repo
         path: s3
       host:
-        cloud-account: AWS-DEV2
         compute-service: k8s-dbs
       inputs:
         - region: us-east-1
